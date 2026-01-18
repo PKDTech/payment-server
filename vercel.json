@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "payment-server",
+  "name": "tournament-payment-server",
   "public": false,
   "builds": [
     {
@@ -41,12 +41,6 @@
   "env": {
     "NODE_ENV": "production",
     "PORT": "3000"
-  },
-  "functions": {
-    "server/index.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
   },
   "regions": ["bom1"],
   "headers": [
