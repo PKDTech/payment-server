@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "tournament-payment-server",
+  "name": "payment-server",
   "public": false,
   "builds": [
     {
