@@ -1,0 +1,72 @@
+{
+  "name": "tournament-payment-server",
+  "version": "1.0.0",
+  "description": "Tournament Payment Server with UPI verification and wallet management",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "build": "echo 'No build step required for Node.js server'",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint server/**/*.js",
+    "lint:fix": "eslint server/**/*.js --fix",
+    "format": "prettier --write server/**/*.js",
+    "deploy:vercel": "vercel --prod",
+    "deploy:vercel:staging": "vercel",
+    "health": "curl http://localhost:3000/api/health",
+    "cleanup": "node scripts/cleanup.js",
+    "monitor": "node scripts/monitor.js",
+    "backup": "node scripts/backup.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0",
+    "compression": "^1.7.4",
+    "morgan": "^1.10.0",
+    "winston": "^3.10.0",
+    "uuid": "^9.0.0",
+    "validator": "^13.9.0",
+    "dotenv": "^16.3.1",
+    "joi": "^17.9.2",
+    "axios": "^1.5.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "prettier": "^3.0.2",
+    "vercel": "^32.4.1"
+  },
+  "keywords": [
+    "tournament",
+    "payment",
+    "upi",
+    "firebase",
+    "vercel",
+    "serverless",
+    "wallet"
+  ],
+  "author": "PKD Rob",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PKDTech/payment-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PKDTech/payment-server.git/issues"
+  },
+  "homepage": "https://github.com/PKDTech/payment-server#readme",
+  "private": true
+}
